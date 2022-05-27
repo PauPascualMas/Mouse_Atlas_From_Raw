@@ -21,10 +21,22 @@ Each read is divided into four files as 10x Genomics v.1 Chemistry was used for 
 **R3** = 10bp UMI;
 **I1** = sample index; 
 
-## 1. Stage classification and merging lanes
+## 1. Stage Classification and Merging Lanes
 As all files from all the different stages are downloaded together, `stage_clasiifyer.ipynb` moves each file to the correspoding stage folder according to the experiment metadata.
 
 Lanes within each embryonic stage are merged with `merging_lanes_stage.sh`.
 
 ## 2. Cell Barcode Filtering (not finished)
-Anna's pipeline 
+Previous to the Trimming process and Alignment, a preliminary exploration and barcode complexity is made with. By this, files with low complexity or not associated to UMIs will be discarded to optimize the downstream pipeline.
+
+Anna's pipeline: `get_cellBC_fastqPijuansala.ipynb`and`concatenatorPijuansala.ipynb`
+
+## Trimming: Trim-Galore (may cause problems with alignment)
+Fastq adapter trimming process with [Trim Galore](https://github.com/FelixKrueger/TrimGalore)
+
+## Alignment with STARsolo
+
+Alignment with [STARsolo](https://github.com/alexdobin/STAR/blob/master/docs/STARsolo.md).
+
+Optimized references: [Enhanced Gene Recovery](https://www.biorxiv.org/content/10.1101/2022.04.26.489449v1.full) and [The Pool Lab](https://www.thepoollab.org/resources)
+
