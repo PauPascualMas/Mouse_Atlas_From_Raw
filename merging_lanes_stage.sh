@@ -5,12 +5,10 @@
 #SBATCH --job-name=merge
 #SBATCH --nodes=1
 #SBATCH --mem 15000
-#SBATCH -o /homes/users/ppascual/scratch/STAR_Align/Scripts/Output_info/slurm.%j.out
-#SBATCH -e /homes/users/ppascual/scratch/STAR_Align/Scripts/Output_info/slurm.%j.err
 
 ## merging all .fastq.gz file type for every stage
 
-PATH_TO_FILES='/homes/users/ppascual/scratch/STAR_Align/Data/Reads/Pijuan'
+PATH_TO_FILES='PATH/TO/YOUR/READ_FILES'
 
 #E-stage 6.5
 cd $PATH_TO_FILES/E_6.5
