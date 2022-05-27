@@ -29,7 +29,7 @@ Lanes within each embryonic stage are merged with `merging_lanes_stage.sh`.
 ## 2. Cell Barcode Filtering (not finished)
 Previous to the Trimming process and Alignment, a preliminary exploration and barcode complexity is made with. By this, files with low complexity or not associated to UMIs will be discarded to optimize the downstream pipeline.
 
-Anna's pipeline: `get_cellBC_fastqPijuansala.ipynb`and`concatenatorPijuansala.ipynb`
+Anna's pipeline: `get_cellBC_fastqPijuansala.ipynb` and `concatenatorPijuansala.ipynb`
 
 ## Trimming: Trim-Galore (may cause problems with alignment)
 Fastq adapter trimming process with [Trim Galore](https://github.com/FelixKrueger/TrimGalore)
