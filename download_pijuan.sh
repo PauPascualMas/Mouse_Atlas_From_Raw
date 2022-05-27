@@ -3,9 +3,6 @@
 #SBATCH --partition=normal
 #SBATCH --job-name=download
 #SBATCH --nodes=1 
-#SBATCH -o /homes/users/ppascual/scratch/STAR_Align/Scripts/Output_info/slurm.%j.out
-#SBATCH -e /homes/users/ppascual/scratch/STAR_Align/Scripts/Output_info/slurm.%j.err
-
 
 module load wget/1.20.3-GCCcore-9.3.0 
 
