@@ -36,6 +36,8 @@ Fastq adapter trimming process with [Trim Galore](https://github.com/FelixKruege
 
 ## Alignment with STARsolo
 
+Run `star_array.sh
+
 Alignment with [STARsolo](https://github.com/alexdobin/STAR/blob/master/docs/STARsolo.md).
 
 Optimized references: [Enhanced Gene Recovery](https://www.biorxiv.org/content/10.1101/2022.04.26.489449v1.full) and [The Pool Lab](https://www.thepoollab.org/resources)
