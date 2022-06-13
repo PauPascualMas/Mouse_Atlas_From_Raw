@@ -36,7 +36,7 @@ Fastq adapter trimming process with [Trim Galore](https://github.com/FelixKruege
 
 ## Alignment with STARsolo
 
-Run `star_array.sh
+Run `star_array.sh`
 
 Alignment with [STARsolo](https://github.com/alexdobin/STAR/blob/master/docs/STARsolo.md).
 
