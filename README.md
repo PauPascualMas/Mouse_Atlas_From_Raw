@@ -21,6 +21,9 @@ Each read is divided into four files as 10x Genomics v.1 Chemistry was used for 
 **R3** = 10bp UMI;
 **I1** = sample index; 
 
+To download the genome and annotation reference used later in the alignment, run `genome_and_annotation_download.sh`
+Optimized references: [Enhanced Gene Recovery](https://www.biorxiv.org/content/10.1101/2022.04.26.489449v1.full) and [The Pool Lab](https://www.thepoollab.org/resources)
+
 ## 1. Stage Classification and Merging Lanes
 
 As all files from all the different stages are downloaded together, `stage_sample_clasifyer.ipynb` creates folders for the diifferent embryonic stages and samples and moves the read files according to the experiment metadata.
@@ -40,9 +43,8 @@ Then, [Trim Galore](https://github.com/FelixKrueger/TrimGalore) (with default se
 
 ## Alignment with STARsolo
 
-Run `star_array.sh`
+Regarding the alignment, `alignment.sh` firstly creates the CB+UMI file needed as the second read input before running [STARsolo](https://github.com/alexdobin/STAR/blob/master/docs/STARsolo.md) (STAR v 2.7.10a). 
 
-Alignment with [STARsolo](https://github.com/alexdobin/STAR/blob/master/docs/STARsolo.md).
+Parameters are set to resemble at its finest CellRanger results, but much more efficiently in terms of time and resources.
 
-Optimized references: [Enhanced Gene Recovery](https://www.biorxiv.org/content/10.1101/2022.04.26.489449v1.full) and [The Pool Lab](https://www.thepoollab.org/resources)
-
+The resulting output will be: **matrix.mtx**, **barcodes.tsv** and **features.tsv**. Moreover, for Velocyto results matrix.mtx is divided into spliced, unspliced and ambiguous counts.
