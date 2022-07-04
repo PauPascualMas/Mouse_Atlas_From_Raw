@@ -43,8 +43,6 @@ Then, [Trim Galore](https://github.com/FelixKrueger/TrimGalore) (with default se
 
 ## Alignment with STARsolo
 
-Regarding the alignment, `alignment.sh` firstly creates the CB+UMI file needed as the second read input before running [STARsolo](https://github.com/alexdobin/STAR/blob/master/docs/STARsolo.md) (STAR v 2.7.10a). 
+Regarding the alignment, `alignment.sh` firstly creates the CB+UMI file needed as the second read input before running [STARsolo](https://github.com/alexdobin/STAR/blob/master/docs/STARsolo.md) (STAR v 2.7.10a). Parameters are set to resemble at its finest CellRanger results, but much more efficiently in terms of time and resources.
 
-Parameters are set to resemble at its finest CellRanger results, but much more efficiently in terms of time and resources.
-
-The resulting output will be: **matrix.mtx**, **barcodes.tsv** and **features.tsv**. Moreover, for Velocyto results matrix.mtx is divided into spliced, unspliced and ambiguous counts.
+The resulting output will be: **matrix.mtx**, **barcodes.tsv** and **features.tsv**. Moreover, for Velocyto results matrix.mtx is divided into **spliced, unspliced** and **ambiguous** counts.
