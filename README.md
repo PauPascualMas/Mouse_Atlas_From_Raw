@@ -21,7 +21,7 @@ Each read is divided into four files as 10x Genomics v.1 Chemistry was used for 
 **R3** = 10bp UMI;
 **I1** = sample index; 
 
-To download the genome and annotation reference used later in the alignment, run `genome_and_annotation_download.sh`
+To download the genome and annotation reference used later in the alignment, run `download_genome_and_annot.sh`
 Optimized references: [Enhanced Gene Recovery](https://www.biorxiv.org/content/10.1101/2022.04.26.489449v1.full) and [The Pool Lab](https://www.thepoollab.org/resources)
 
 ## 1. Stage Classification and Merging Lanes
