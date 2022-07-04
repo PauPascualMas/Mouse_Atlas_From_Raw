@@ -41,7 +41,7 @@ First, `ḿerging_and_trimming.sh` merges all files of each type (R1, R2, and R3
 Then, [Trim Galore](https://github.com/FelixKrueger/TrimGalore) (with default settings) performs the trimming process on the cDNA read (R1), whose output is saved as **merged_R1_trimmed.fq.gz** in the selected stage/sample.
 
 
-## Alignment with STARsolo
+## 4. Alignment with STARsolo
 
 Regarding the alignment, `alignment.sh` firstly creates the CB+UMI file needed as the second read input before running [STARsolo](https://github.com/alexdobin/STAR/blob/master/docs/STARsolo.md) (STAR v 2.7.10a). Parameters are set to resemble at its finest CellRanger results, but much more efficiently in terms of time and resources.
 
@@ -54,3 +54,7 @@ The alignment output consists of:
 **features.tsv**: sorted list of gene names
 
 Moreover, for Velocyto results matrix.mtx is divided into **spliced, unspliced** and **ambiguous** counts.
+
+## 5. Metadata creation and assembling all sample alignment results
+
+
