@@ -22,16 +22,20 @@ Each read is divided into four files as 10x Genomics v.1 Chemistry was used for 
 **I1** = sample index; 
 
 ## 1. Stage Classification and Merging Lanes
+
 As all files from all the different stages are downloaded together, `stage_sample_clasifyer.ipynb` creates folders for the diifferent embryonic stages and samples and moves the read files according to the experiment metadata.
 
 ## 2. Cell Barcode Filtering (not finished)
+
 Previous to the Trimming process and Alignment, a preliminary exploration and barcode complexity is made with. By this, files with low complexity or not associated to UMIs will be discarded to optimize the downstream pipeline.
 
 Anna's pipeline: `get_cellBC_fastqPijuansala.ipynb` and `concatenatorPijuansala.ipynb`
 
 ## 3. Merging and Trimming: Trim Galore
-First, `ḿerging_and_trimming.sh` merges all files of each type (R1, R2, and R3) into a *merged_R?.fastq.gz* file containing all reads for the selected sample (stage and sample have to be input manually as variables: _E_stage_ and _Sample_).
-Then, [Trim Galore](https://github.com/FelixKrueger/TrimGalore) (with default settings) performs the trimming process on the cDNA read (R1), whose output is saved as merged_R1_trimmed.fq.gz in the selected stage/sample.
+
+First, `ḿerging_and_trimming.sh` merges all files of each type (R1, R2, and R3) into a **merged_R-.fastq.gz** file containing all reads for the selected sample (stage and sample have to be input manually as variables: _E_stage_ and _Sample_).
+
+Then, [Trim Galore](https://github.com/FelixKrueger/TrimGalore) (with default settings) performs the trimming process on the cDNA read (R1), whose output is saved as **merged_R1_trimmed.fq.gz** in the selected stage/sample.
 
 
 ## Alignment with STARsolo
