@@ -17,11 +17,7 @@ module load Trim_Galore/0.6.7-GCCcore-10.3.0
 module load gzip/1.10-GCCcore-11.2.0 
 
 ALIGN_DATA='/path/to/Data'
-GENOME_FILE="${ALIGN_DATA}/Genome/genome.fa"
-ANNOTATION_FILE="${ALIGN_DATA}/Annotation/mouse_mm10_optimized_v1.gtf.gz"
-ALIGN_RESULTS='/path/to/Results/Alignment_Pijuan'
 READS_DIR="${ALIGN_DATA}/Reads/Pijuan"
-UMI_whitelist="${ALIGN_DATA}/BC_whitelist/BC_whitelist_v1/737K-april-2014_rc.txt"
 
 #Manually changing stage and sample for the analysis
 E_stage='E_8.5' #e.g
