@@ -47,7 +47,9 @@ Regarding the alignment, `alignment.sh` firstly creates the CB+UMI file needed a
 
 The alignment output consists of: 
 **matrix.mtx**: sparse count matrix 
+
 **barcodes.tsv**: sorted list of the barcodes
+
 **features.tsv**: sorted list of gene names
 
 Moreover, for Velocyto results matrix.mtx is divided into **spliced, unspliced** and **ambiguous** counts.
