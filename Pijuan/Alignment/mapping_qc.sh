@@ -223,10 +223,9 @@ module load MultiQC/1.9-foss-2019b-Python-3.7.4
 
 # cd to where all FastQC files on the STARsolo outputs are stored
 cd $SCRIPTS_DIR
-cd $ALIGN_QC_DIR
 
 # Runnning MultiQC
-multiqc .
+multiqc Results/Alignment_QC/ -o ../Results/MultiQC/ -n STARsolo_QC_
 exit
 
 
