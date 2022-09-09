@@ -69,9 +69,9 @@ done
 #RUNNING MULTIQC ON ALL FASTQC REPORTS
 module load MultiQC/1.9-foss-2019b-Python-3.7.4 
 
-cd $FASTQC_OUT
+mkdir -P ../Results/MultiQC
 
-multiqc . 
+multiqc Results/FastQC_Output/ -o ../Results/MultiQC/ -n Untrimmed_ 
 exit
 
 module unload MultiQC/1.9-foss-2019b-Python-3.7.4 
@@ -134,9 +134,9 @@ module unload Trim_Galore/0.6.7-GCCcore-10.3.0
 #RUNNING MULTIQC ON ALL FASTQC REPORTS
 module load MultiQC/1.9-foss-2019b-Python-3.7.4 
 
-cd $TRIMMED_FASTQC_OUT
+mkdir -P ../Results/MultiQC
 
-multiqc .
+multiqc Results/Trimmed_FastQC_Output/ -o ../Results/MultiQC/ -n Trimmed_ 
 exit
 
 module unload MultiQC/1.9-foss-2019b-Python-3.7.4 
