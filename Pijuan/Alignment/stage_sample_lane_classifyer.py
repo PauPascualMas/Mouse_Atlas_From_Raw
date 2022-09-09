@@ -18,6 +18,7 @@ from os.path import isfile, join
 # #### Listing *fastq files* and loading *metadata*
 #path to where files have been downloaded
 path_to_files= './Data/Raw_files/'
+path_to_metadata='./Data/'
 
 #defining the different stages
 stages=['E_6.5','E_6.75','E_7.0','E_7.25','E_7.5','E_7.75','E_8.0','E_8.25','E_8.5', 'mixed']
@@ -27,7 +28,7 @@ onlyfiles = [f for f in listdir(path_to_files) if isfile(join(path_to_files, f))
 onlyfiles = [k for k in onlyfiles if 'fastq.gz' in k]
 
 #importing metadata file
-met = pd.read_csv(path_to_files + 'E-MTAB-6967.sdrf.txt', sep='\t')
+met = pd.read_csv(path_to_metadata + 'E-MTAB-6967.sdrf.txt', sep='\t')
 met['Source Name']= met.replace(' ', '_', regex=True)
 met
 
